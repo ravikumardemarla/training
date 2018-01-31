@@ -1,0 +1,9 @@
+<div class="col-sm-3">
+  <button class="btn btn-primary" (click)="fetchData()">Fetch Data</button>
+  <button class="btn btn-danger" (click)="stopSequenceCalls()">Stop Data</button>
+  <button class="btn btn-primary" (click)="clearData()">Clear</button>
+</div>
+
+<div *ngFor="let user of userData">
+  <p>User Id: {{user.id}} Name: {{user.fullName}} Project: {{user.project}}</p>
+</div>

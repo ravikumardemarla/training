@@ -1,0 +1,11 @@
+.user {
+  padding: 20px;
+  border: darkgray 1px;
+  background-color: aliceblue;
+}
+
+.show-user {
+  padding: 20px;
+  border: greenyellow 1px;
+  background-color: darkkhaki;
+}
