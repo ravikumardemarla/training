@@ -12,6 +12,10 @@ export const APP_ROUTING: Routes = [
     loadChildren: './sequence/sequence.module#SequenceModule'
   },
   {
+    path: 'student',
+    loadChildren: './student/student.module#StudentModule'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

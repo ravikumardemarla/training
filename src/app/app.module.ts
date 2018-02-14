@@ -7,13 +7,14 @@ import {ServiceInterceptor} from './service/service.Interceptor';
 import {APP_ROUTES} from './app.routing';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
-
+import {NumberOnlyDirective} from './directive/numberOnly.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NumberOnlyDirective
   ],
   imports: [
     APP_ROUTES,

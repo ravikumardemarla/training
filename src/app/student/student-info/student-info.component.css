@@ -1,0 +1,48 @@
+.container {
+  padding-top: 20px;
+}
+
+.lbl-text {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.lbl-text-form {
+  font-weight: bold;
+}
+
+.horizontal-line {
+  margin-top: 0;
+}
+
+.container-border {
+  border: 1px solid #000000;
+  margin-bottom: -1px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table-bordered {
+  border: 1px solid #000000 !important;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #000000;
+}
+
+/*.form-inline label {
+  width: 100px;
+}*/
+
+.make-border {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #000000;
+}
+
+.student-form {
+  margin-bottom: 20px;
+}
