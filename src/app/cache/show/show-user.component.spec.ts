@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ShowUsersComponent} from './show-users.component';
-import {UserService} from '../service/user.service';
+import {UserService} from '../user.service';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('ShowUserComponent', () => {
