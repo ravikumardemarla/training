@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 describe('StudentComponent', () => {
   let component: StudentInfoComponent;
   let fixture: ComponentFixture<StudentInfoComponent>;
+  let expectStudentsInfo = [];
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,6 +27,29 @@ describe('StudentComponent', () => {
     fixture.detectChanges();
   });
 
+  beforeEach(() => {
+    expectStudentsInfo = [
+      {
+        'name': 'rajiv',
+        'marks': {
+          'Maths': '18',
+          'English': '21',
+          'Science': '45'
+        },
+        'rollNumber': 'KV2017-5A2'
+      },
+      {
+        'name': 'abhishek',
+        'marks': {
+          'Maths': '43',
+          'English': '30',
+          'Science': '37'
+        },
+        'rollNumber': 'KV2017-5A1'
+      }
+    ];
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
@@ -33,18 +57,24 @@ describe('StudentComponent', () => {
   it(`should call 'student service'`, async(() => {
     const studentService = TestBed.get(StudentService);
     expect(studentService).toBeDefined();
-    const expected = {
-      name: 'ravi',
-      rollNumber: '1233-5A',
-      marks: {
-        maths: '30',
-        science: '40',
-      }
-    };
-
+    component.ngOnInit();
     studentService.getStudents().subscribe((actual) => {
-      expect(actual.length).toBe(1);
-      expect(expected).toEqual(actual);
+      expect(actual.length).toBe(2);
+      expect(expectStudentsInfo).toEqual(actual);
     });
   }));
+
+  it(`should 'Student form' is invalid`, async(() => {
+    expect(component.studentForm.invalid).toBeTruthy();
+  }));
+
+  it(`should 'Student form' is valid`, async(() => {
+    component.studentForm.get('name').setValue('Ravi Kumar 123');
+    component.studentForm.get('lastName').setValue('Ravi Kumar');
+    component.studentForm.get('class').setValue('12B');
+    component.studentForm.get('year').setValue('2016');
+    component.studentForm.get('percentage').setValue('68');
+    expect(component.studentForm.valid).toBeTruthy();
+  }));
+
 });
