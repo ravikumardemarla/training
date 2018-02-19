@@ -16,6 +16,10 @@ export const APP_ROUTING: Routes = [
     loadChildren: './student/student.module#StudentModule'
   },
   {
+    path: 'httpclient',
+    loadChildren: './httpclient/httpclient.module#HttpclientSampleModule'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   API_URL: 'http://localhost:4200/assets/user-info.json',
-  STUDENT_INFO: 'http://localhost:4200/assets/data.json'
+  STUDENT_INFO: 'http://localhost:4200/assets/data.json',
+  JSON_SERVER: 'http://jsonplaceholder.typicode.com/posts'
 };
