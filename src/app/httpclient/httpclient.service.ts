@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs/Observable";
-import { DataResponse } from "../model/data.model";
-import { environment } from "../../environments/environment";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { DataResponse } from '../model/data.model';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class HttpClientService {
@@ -17,6 +17,6 @@ export class HttpClientService {
     }
 
     public addPostData(data: DataResponse): Observable<DataResponse> {
-        return this.http.post<DataResponse>(`${environment.JSON_SERVER}`, data)
+        return this.http.post<DataResponse>(`${environment.JSON_SERVER}`, data);
     }
 }

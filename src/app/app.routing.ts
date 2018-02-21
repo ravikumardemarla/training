@@ -20,6 +20,10 @@ export const APP_ROUTING: Routes = [
     loadChildren: './httpclient/httpclient.module#HttpclientSampleModule'
   },
   {
+    path: 'login',
+    loadChildren: './login/login.module#LoginModule'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

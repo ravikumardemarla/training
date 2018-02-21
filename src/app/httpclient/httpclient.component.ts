@@ -23,16 +23,16 @@ export class HttpclientComponent implements OnInit {
     this.httpService.getUserData().subscribe((resp) => {
       this.userData = resp;
       console.log('this.userdata is :::  ', this.userData);
-    })
+    });
   }
 
   private getUserIdData(): void {
     this.httpService.getUserIdData(1).subscribe((resp) => {
-      console.log(" user id 1 data is :: ", resp);
+      console.log(' user id 1 data is :: ', resp);
     },
       (err: HttpErrorResponse) => {
         console.log('Error getting is:: ', err);
-      })
+      });
   }
 
   private addUserData(): void {
@@ -42,6 +42,6 @@ export class HttpclientComponent implements OnInit {
     userData.userId = '1122';
     this.httpService.addPostData(userData).subscribe((resp) => {
       console.log('Post Data added ::: ', resp);
-    })
+    });
   }
 }

@@ -10,8 +10,9 @@ export class NavBarComponent implements OnInit {
   public navList = [
     { routePath: '', description: 'Cache' },
     { routePath: 'sequence', description: 'Sequence Calls' },
-    { routePath: 'student', description: 'Student Info'},
-    { routePath: 'httpclient', description: 'Http Client'}
+    { routePath: 'student', description: 'Student Info' },
+    { routePath: 'httpclient', description: 'Http Client' },
+    { routePath: 'login', description: 'Login' }
   ];
 
   public ngOnInit(): void {

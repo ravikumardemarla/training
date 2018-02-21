@@ -1,0 +1,36 @@
+.border-container {
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.form-inline {
+    padding: 10px;
+}
+.form-group {
+    float: left;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    width: 100px;
+    float: left;
+}
+
+.form-group input {
+    height: 35px;
+    border: 1px solid black;
+    border-radius: .25rem;
+    padding: 0 5px;
+}
+
+.form-control {
+    padding: 0;
+}
+
+.form-group.error input {
+    border: 1px solid red;
+}
