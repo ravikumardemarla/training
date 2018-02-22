@@ -1,0 +1,27 @@
+.top-container {
+    margin: 0 auto;
+    width: 30%;
+    border: 1px solid black;
+    height: auto;
+    padding: 20px;
+    
+}
+
+.top-container label {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+.inner-container div {
+    margin: 0 auto;
+    width: 60%;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    margin-top: 1rem 0;
+}
+
+.inner-container div p {
+    text-align: center;
+    margin-top: 1rem;
+}

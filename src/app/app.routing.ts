@@ -24,6 +24,10 @@ export const APP_ROUTING: Routes = [
     loadChildren: './login/login.module#LoginModule'
   },
   {
+    path: 'todo',
+    loadChildren: './todo/todo.module#TodoModule'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Ravi",
+        "age": 32,
+        "status": "pending"
+    },
+    {
+        "name": "Kumar",
+        "age": 25,
+        "status": "accepted"
+    }
+]

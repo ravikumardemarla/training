@@ -12,7 +12,8 @@ export class NavBarComponent implements OnInit {
     { routePath: 'sequence', description: 'Sequence Calls' },
     { routePath: 'student', description: 'Student Info' },
     { routePath: 'httpclient', description: 'Http Client' },
-    { routePath: 'login', description: 'Login' }
+    { routePath: 'login', description: 'Login' },
+    { routePath: 'todo', description: 'Todo' }
   ];
 
   public ngOnInit(): void {
