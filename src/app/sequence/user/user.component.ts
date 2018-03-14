@@ -1,6 +1,6 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {UserService} from '../user.service';
-import {Subscription} from 'rxjs/Subscription';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-user',
@@ -12,11 +12,16 @@ export class UserComponent implements OnInit, OnDestroy {
   private serviceSubscriber$: Subscription;
 
   public userData = [];
+  private messages = [];
 
   constructor(private userService: UserService) {
   }
 
   public ngOnInit(): void {
+    this.serviceSubscriber$ = this.userService.getMessages().subscribe(message => {
+      this.messages.push(message);
+      console.log('Messages getting frm Server :::    ', message);
+    });
   }
 
   public ngOnDestroy(): void {
@@ -44,5 +49,17 @@ export class UserComponent implements OnInit, OnDestroy {
 
   public clearData(): void {
     this.userData.length = 0;
+  }
+
+  public creatmessages(): void {
+    this.userService.sendMessage();
+  }
+
+  public stopSendingMessages(): void {
+    this.serviceSubscriber$.unsubscribe();
+  }
+
+  public clearMessages(): void {
+    this.messages.length = 0;
   }
 }
