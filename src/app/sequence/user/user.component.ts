@@ -12,17 +12,32 @@ export class UserComponent implements OnInit, OnDestroy {
   private serviceSubscriber$: Subscription;
 
   public userData = [];
-  private messages = [];
+  public messages = [];
 
   constructor(private userService: UserService) {
   }
 
   public ngOnInit(): void {
     this.serviceSubscriber$ = this.userService.getMessages().subscribe(message => {
-      this.messages.push(message);
+      const updateMessage = this.getImagePath(message);
+      this.messages.push(updateMessage);
       console.log('Messages getting frm Server :::    ', message);
     });
   }
+
+  public getImagePath(m): any {
+    const baseUrl = 'http://192.168.2.229:1600/';
+    const message = m;
+    message.Detected_Image_Path = baseUrl + m.Detected_Image_Path.replace('BaseDirectory', 'intelli-vision');
+    message.Enrolled_Image_Path = baseUrl + m.Enrolled_Image_Path.replace('BaseDirectory', 'intelli-vision');
+    if (m.Person_Name !== 'unknownFN') {
+      message.Person_Name = m.Person_Name.split(' ')[1];
+    } else {
+      message.Person_Name = 'Unknow Person';
+    }
+    return message;
+  }
+
 
   public ngOnDestroy(): void {
     if (this.serviceSubscriber$) {
