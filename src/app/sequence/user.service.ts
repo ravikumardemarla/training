@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/startWith';
 import { environment } from '../../environments/environment';
 import { IntervalObservable } from 'rxjs/observable/IntervalObservable';
 import * as io from 'socket.io-client';
@@ -19,8 +20,8 @@ export class UserService {
   }
 
   public getSequenceCalls(): Observable<any> {
-    this.intervalObservable = IntervalObservable.create(1000).flatMap(() =>
-      this.httpClient.get(`${environment.FR_URL}`));
+    this.intervalObservable = IntervalObservable.create(5000).startWith(1).flatMap(() =>
+      this.httpClient.get(`${environment.API_URL}`));
 
     return this.intervalObservable;
   }
@@ -28,9 +29,9 @@ export class UserService {
   getMessages() {
     const observable = new Observable(observer => {
       this.socket = io(`${environment.FR_URL}`);
-      this.socket.on('user-data', (data) => {
+       this.socket.on('user-data', (data) => {
         observer.next(data);
-      });
+      }); 
       return () => {
         this.socket.disconnect();
       };

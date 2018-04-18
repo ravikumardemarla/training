@@ -28,6 +28,10 @@ export const APP_ROUTING: Routes = [
     loadChildren: './todo/todo.module#TodoModule'
   },
   {
+    path: 'upload',
+    loadChildren: './upload/upload.module#UploadModule'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

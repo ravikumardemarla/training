@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="column" [formGroup]="userDetails">
+    <div class="form-group">
+      <label>First Name</label>
+      <input placeholder="enter first name" formControlName="first" class="form-controll">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input placeholder="enter first name" formControlName="last" class="form-controll">
+    </div>
+   <!--  <div class="form-group">
+      <label>Select image</label>
+      <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+    </div> -->
+    <div class="form-group">
+        <button class="btn btn-primary" (click)="saveImage()">Save</button>
+      <button class="btn btn-danger" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="email-form-container" [formGroup]="emailForm">
+    <div class="form-group email-div">
+      <label>Email</label>
+      <input class="form-controll" formControlName="email" placeholder="enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <button (click)="sendEmailConfiguration()" class="btn btn-success">Configure</button>
+  </div>
+</div>

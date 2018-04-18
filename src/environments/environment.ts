@@ -9,5 +9,7 @@ export const environment = {
   STUDENT_INFO: 'http://localhost:4200/assets/data.json',
   JSON_SERVER: 'http://jsonplaceholder.typicode.com/posts',
   TODO_URL: 'http://localhost:4200/assets/todos.json',
-  FR_URL: 'http://localhost:3000'
+  FR_URL: 'http://localhost:3000',
+  FR_USER_REG: 'http://localhost:7010',
+  REMOTE_REG: 'http://198.168.2.252:7010'
 };

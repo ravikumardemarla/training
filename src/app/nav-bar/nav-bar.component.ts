@@ -13,7 +13,8 @@ export class NavBarComponent implements OnInit {
     { routePath: 'student', description: 'Student Info' },
     { routePath: 'httpclient', description: 'Http Client' },
     { routePath: 'login', description: 'Login' },
-    { routePath: 'todo', description: 'Todo' }
+    { routePath: 'todo', description: 'Todo' },
+    { routePath: 'upload', description: 'Upload' }
   ];
 
   public ngOnInit(): void {
