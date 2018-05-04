@@ -122,3 +122,16 @@ MicroService flow diagram:
 FR App Architecture diagram:
 
 ![alt text](https://drive.google.com/uc?id=1Eol6--nsG6d5QCtjmQkXsYwZCGcEmY1B)
+
+
+# training
+techolution training
+
+
+docker commands:
+
+Build docker image
+$ docker build -t training .
+
+Run the container
+$ docker run -d -p 4200:80 training
