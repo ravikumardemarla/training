@@ -36,8 +36,8 @@ Calls
   
  ```
 
-###`AdminService`
-###proto
+### `AdminService`
+### proto
  ``
  frApp.proto
  ``
@@ -71,8 +71,8 @@ Calls
         Send mail to user for registration.
   ```
 
-###`ConfigurationService`
-###proto
+### `ConfigurationService`
+### proto
 ``
 configution.proto
 ``
@@ -91,8 +91,8 @@ Microservice Calls
         This operation perform save or update email configuration.
 ```
 
-###`UserRegService`
-###proto
+### `UserRegService`
+### proto
 ``
 reg.proto
 ``
@@ -116,9 +116,9 @@ Microservice Calls
 
 MicroService flow diagram:
 
-![alt text](https://drive.google.com/open?id=1CCrMM3hvBeA-zejEADuVnTmuz2GkSeae)
+![alt text](https://drive.google.com/uc?id=1CCrMM3hvBeA-zejEADuVnTmuz2GkSeae)
 
 
 FR App Architecture diagram:
 
-![alt text](https://drive.google.com/open?id=1Eol6--nsG6d5QCtjmQkXsYwZCGcEmY1B)
+![alt text](https://drive.google.com/uc?id=1Eol6--nsG6d5QCtjmQkXsYwZCGcEmY1B)
